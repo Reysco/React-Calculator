@@ -1,0 +1,70 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/*color of the all page*/
+body{
+    margin:0;
+    background: linear-gradient(to right, #3a0000, #211c1c);
+}
+
+/*size of calculator*/
+.calculatorGrid {
+    display:grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem); /*numbers*/
+    grid-template-rows: minmax(7rem, auto) /*size visor*/ repeat(5, 6rem); /*size page and body*/
+}
+
+/*color of button*/
+.calculatorGrid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(46, 43, 43);
+    outline: none;
+    background-color: rgba(10, 11, 11, 0.75);
+    color: rgb(223, 223, 223);
+    border-radius: 0.5rem;
+
+}
+
+/*hover mouse over*/ 
+.calculatorGrid > button:hover,
+.calculatorGrid > button:focus{
+    background-color: rgba(75, 75, 75, 0.9);
+}
+
+/*to the larger square*/
+/*
+.spanTwo{
+    grid-column: span 2;
+}
+*/
+
+/*visor*/
+.output{
+    grid-column: 1 / -1;
+    background-color: rgb(39, 31, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 0.5rem;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+/*number of visor previous*/
+.output .OldNum{
+    color: rgb(163, 163, 163);
+    font-size: 1.5rem;
+}
+
+/*number of visor current*/
+.output .Num{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
